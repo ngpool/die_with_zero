@@ -1,0 +1,9 @@
+node_modules
+.expo
+dist
+.git
+global.css
+babel.config.js
+metro.config.js
+tailwind.config.js
+nativewind-env.d.ts
