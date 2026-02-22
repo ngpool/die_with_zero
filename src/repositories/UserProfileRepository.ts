@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
-import { db } from "./client";
-import { userProfile } from "./schema";
+import { db } from "../db/client";
+import { userProfile } from "../db/schema";
 
 export const UserProfileRepository = {
 	async getProfile() {
