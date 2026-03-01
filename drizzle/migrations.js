@@ -3,7 +3,13 @@
 
 import journal from './meta/_journal.json';
 
-const m0000 = `CREATE TABLE \`todo_items\` (
+const m0000 = `CREATE TABLE IF NOT EXISTS "__drizzle_migrations" (
+	id integer PRIMARY KEY AUTOINCREMENT,
+	hash text NOT NULL,
+	created_at integer
+);
+--> statement-breakpoint
+CREATE TABLE \`todo_items\` (
 	\`id\` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	\`title\` text NOT NULL,
 	\`description\` text,
@@ -25,8 +31,8 @@ CREATE TABLE \`user_profile\` (
 );`;
 
 export default {
-  journal,
-  migrations: {
-    m0000
-  }
+	journal,
+	migrations: {
+		m0000
+	}
 }
