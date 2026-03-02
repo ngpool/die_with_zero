@@ -21,6 +21,20 @@ export default function TabLayout() {
                     tabBarLabel: "Home",
                 }}
             />
+            <Tabs.Screen
+                name="profile"
+                options={{
+                    title: "マイページ",
+                    tabBarLabel: "マイページ",
+                }}
+            />
+            <Tabs.Screen
+                name="calendar"
+                options={{
+                    title: "カレンダー",
+                    tabBarLabel: "カレンダー",
+                }}
+            />
         </Tabs>
     );
 }
